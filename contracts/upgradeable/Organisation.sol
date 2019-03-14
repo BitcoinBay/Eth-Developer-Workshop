@@ -27,7 +27,7 @@ contract Organisation
     return eternalStorage.getProposalCount();
   }
 
-  function getProposal(uint256 _id) constant returns (bytes32 _name, uint256 _eth)
+  /*function getProposal(uint256 _id) constant returns (bytes32 _name, uint256 _eth)
   {
     return eternalStorage.getProposal(_id);
   }
@@ -46,16 +46,11 @@ contract Organisation
   {
     eternalStorage.setProposalFund(_id, _eth);
   }
-
-  function generateTokens(uint256 _amount)
-  {
-    tokenLedger.generateTokens(_amount);
-  }
-
-  function getBalance(address _account) constant returns (uint256)
+   function getBalance(address _account) constant returns (uint256)
   {
     return tokenLedger.balanceOf(_account);
   }
+
 
   function kill(address upgradedOrganisation_)
   {
@@ -63,4 +58,14 @@ contract Organisation
     tokenLedger.transfer(upgradedOrganisation_, tokenBalance);
     selfdestruct(upgradedOrganisation_);
   }
+
+  */
+
+  function generateTokens(uint256 _amount)
+  {
+    tokenLedger.generateTokens(_amount);
+  }
+
+
+
 }
